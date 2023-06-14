@@ -10,36 +10,24 @@ type users struct {
 
 var sliceUser = []users{}
 
-func register() {
+func register(namex string, emailx string, passwordx string) {
 	usersX := users{
-		name:     "John Doe",
-		email:    "John@gmail.com",
-		password: "abcde",
+		name:     namex,
+		email:    emailx,
+		password: passwordx,
 	}
 
 	sliceUser = append(sliceUser, usersX)
 
-	usersX2 := users{
-		name:     "John Doe 2",
-		email:    "John@gmail.com",
-		password: "abcde",
-	}
-
-	sliceUser = append(sliceUser, usersX2)
-
-	usersX3 := users{
-		name:     "John Doe 3",
-		email:    "John@gmail.com",
-		password: "abcde",
-	}
-
-	sliceUser = append(sliceUser, usersX3)
 }
 
 func get() {
 	fmt.Println(sliceUser)
 }
 func main() {
-	register()
+	register("ricky 1", "ricky@gmail.com", "q123")
+	register("ricky 2", "ricky@gmail.com", "q123")
+	register("ricky 3", "ricky@gmail.com", "q123")
+
 	get()
 }
